@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://8qcqx6ujpcqo"]
+
+[ext_resource type="Texture2D" uid="uid://dd14yvscw8gcd" path="res://assets/sprites/player/Warrior_Blue.png" id="1_1hmtu"]
+[ext_resource type="Script" uid="uid://03p7yosw83m7" path="res://scenes/entities/player/player.gd" id="1_635qg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ndica"]
+radius = 24.020824
+
+[node name="Player" type="CharacterBody2D" unique_id=1980569073]
+script = ExtResource("1_635qg")
+speed = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=370849162]
+
+[node name="WarriorBlue" type="Sprite2D" parent="." unique_id=2144252008]
+position = Vector2(0, -32)
+texture = ExtResource("1_1hmtu")
+hframes = 6
+vframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1013256824]
+shape = SubResource("CircleShape2D_ndica")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1403769581]
+position = Vector2(0, 1)
